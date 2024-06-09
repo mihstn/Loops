@@ -1,15 +1,19 @@
 input.onButtonPressed(Button.A, function () {
-    firstChar += 1
+    runOrNot = false
+})
+input.onButtonPressed(Button.B, function () {
+    runOrNot = true
 })
 let randomName = ""
-let myVar1 = ["Michael", "Leo", "Mindaugas"]
-let runOrNot = true
-let firstChar: number = ""
+let runOrNot = false
+let names = ["Michael", "Leo", "Jelena"]
+runOrNot = true
+let realFirstChart = ""
 basic.forever(function () {
     while (runOrNot) {
-        randomName = myVar1._pickRandom()
-        firstChar = randomName.charAt(0)
-        basic.showString("" + (firstChar))
-        control.waitMicros(1000)
+        randomName = names._pickRandom()
+        realFirstChart = randomName.charAt(0)
+        basic.showString(realFirstChart)
+        control.waitMicros(500)
     }
 })
